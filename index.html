@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Fee Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input {
+            width: calc(100% - 16px);
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .fee-table th, .fee-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .fee-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .highlighted {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-print {
+            display: block;
+            width: 100%;
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .btn-print:hover {
+            background-color: #218838;
+        }
+        .alert-danger {
+            color: red;
+            font-weight: bold;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Audit Fee Calculator</h1>
+        <div class="form-group">
+            <label for="turnover">Turnover (RM):</label>
+            <input type="number" id="turnover" placeholder="Enter Turnover">
+        </div>
+        <div class="form-group">
+            <label for="totalAssets">Total Assets (RM):</label>
+            <input type="number" id="totalAssets" placeholder="Enter Total Assets">
+        </div>
+        <div class="form-group">
+            <label for="operatingExpenses">Total Operating Expenses (RM):</label>
+            <input type="number" id="operatingExpenses" placeholder="Enter Operating Expenses">
+        </div>
+        <div id="result"></div>
+    </div>
+    <div class="footer">
+        &copy; 2024
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
